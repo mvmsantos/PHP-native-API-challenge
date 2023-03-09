@@ -1,0 +1,8 @@
+{
+    "name":"htdocs/php-native-api-challenge",
+    "autoload": {
+        "psr-4": {
+            "App\\":"app/"
+        }
+    }
+}
