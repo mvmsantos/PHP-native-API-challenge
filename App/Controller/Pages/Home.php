@@ -11,8 +11,13 @@ class Home{
      * @return string
      */
     public static function getHome(){
-        return View::render('pages/home');
-
+        return View::render('pages/home',[
+            'id' => 'testeID',
+            'description' => 'testeDescrição',
+            'sellValue' => 'testeValorVenda',
+            'productStock' => 'testeEstoque',
+            'productImage' => 'testeImagens',
+        ]);
     }
 
 }
