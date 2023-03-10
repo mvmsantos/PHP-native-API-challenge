@@ -27,7 +27,7 @@ class Home extends Page {
         ]);
 
         //RETORNA A VIEW DA PAGINA
-        return parent::getPage('HOME(Tela 1)', $content);
+        return parent::getPage('Teste Bootstrap', $content);
     }
 
 }
