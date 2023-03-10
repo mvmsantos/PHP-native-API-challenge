@@ -1,14 +1,24 @@
 <?php
 
-require __DIR__.'/vendor/autoload.php';
+    require __DIR__.'/vendor/autoload.php';
 
-use \App\Controller\Pages\Home;
+    use \App\Http\Router;
+    use App\Utils\View;
 
-$obResponse = new \App\Http\Response(200,'Olá Mundo');
+    define('URL', 'http://localhost/php-native-api-challenge');
 
-$obResponse->sendResponse();
+    //DEFINE VALOR PADRÃO DAS VARIAVEIS
+    View::init([
+        'URL' => URL
+    ]);
 
-exit;
-echo Home::getHome();
+    //INICIA O ROTEADOR DO ROUTER
+    $obRouter = new Router(URL);
+
+    //INCLUI AS ROTAS DE PAGINAS
+    include __DIR__.'/routes/pages.php';
+
+    //IMPRIME O RESPONSE DA ROTA
+    $obRouter->run()->sendResponse();
 
 ?>

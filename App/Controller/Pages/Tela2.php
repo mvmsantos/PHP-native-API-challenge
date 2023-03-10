@@ -5,7 +5,7 @@ namespace App\Controller\Pages;
 use \App\Utils\View;
 use \App\Model\Entity\Organization;
 
-class Home extends Page {
+class Tela2 extends Page {
 
     /**
      * Metodo responsavel por retornar o View da nossa home
@@ -17,9 +17,8 @@ class Home extends Page {
         $obOrganization = new Organization;
         
         //VIEW DA HOME
-        $content = View::render('pages/Home',[
+        $content = View::render('pages/tela2',[
             'id' => $obOrganization->id,
-            'name' => $obOrganization->name,
             'description' => $obOrganization->description,
             'sellValue' => $obOrganization->sellValue,
             'productStock' => $obOrganization->productStock,
@@ -27,7 +26,7 @@ class Home extends Page {
         ]);
 
         //RETORNA A VIEW DA PAGINA
-        return parent::getPage('HOME(Tela 1)', $content);
+        return parent::getPage('Tela 2', $content);
     }
 
 }
